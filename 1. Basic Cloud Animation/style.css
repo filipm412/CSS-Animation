@@ -1,0 +1,46 @@
+img {
+    position: absolute;
+    top: 30%;
+    left: 30%;
+    animation-name: animation;
+    animation-iteration-count: infinite;
+    animation-timing-function: cubic-bezier(0.67,-0.04, 0.9, 0.38);
+    animation-duration: 0.8s;
+    animation-direction: alternate;  
+ }
+ div {
+    position: absolute;
+    top: 30%;
+    left: 30%;
+    width: 64px;
+    height: 20px;
+    box-shadow: 0px 44px 14px -7px #4b515a;
+    animation-name: animation-shadow;
+    animation-iteration-count: infinite;
+    animation-duration: 0.8s;
+    animation-direction: alternate;
+    animation-timing-function: cubic-bezier(0.32, 0.68, 0.57, 0.71);
+    
+ }
+@keyframes animation {
+ 0% {
+     transform: translateY(-20px);
+ }
+ 100% {
+     transform: translateY(0px);
+ }
+} 
+@keyframes animation-shadow {
+0% {
+    opacity: 0;
+}
+80% {
+    opacity: 0.5;
+}
+90% {
+    opacity: 1;
+}
+100% {
+    opacity: 0.8;
+}
+}
