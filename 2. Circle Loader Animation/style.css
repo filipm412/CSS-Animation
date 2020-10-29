@@ -1,0 +1,103 @@
+* {
+    font-family: 'Roboto', sans-serif;
+}
+html {
+    background-color: #2e3035;
+}
+body {
+    background-color: white;
+    width: 30%;
+    height: 400px;
+    margin: 200px auto;
+    text-align: center;
+    padding: 20px;
+}
+#circle {
+    width: 100px;
+    height: 100px;
+    border: 1px solid lightgray;
+    border-radius: 50%;
+    margin: 40px auto;
+    display: inline-block;
+    animation-name: firstCircleAnimation;
+    animation-iteration-count: 1;
+    animation-duration: 0.4s;
+    animation-delay: 4.5s;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
+    background-color: white;
+    position: relative;
+    z-index: 1;
+}
+#circle::before {
+    content: '';
+    display: inline-block;
+    width: 25px;
+    height: 50px;
+    border-right: 4px white solid;
+    border-bottom: 4px white solid;
+    position: relative;
+    top: 14px;
+    left: 20px;
+    animation-name: beforeAnimation;
+    animation-timing-function: linear;
+    animation-duration: 0.5s;
+    animation-delay: 4.5s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    transform-origin: 0px 0px ;
+    transform: rotateZ(40deg);
+    
+}
+#second-circle {
+    border-top: solid 1px #2fb45a;
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+    border-bottom: none;
+    border-left: solid 1px #2fb45a;
+    border-right: none;
+    border-radius: 50%;
+    animation-name: rotationAnimation;
+    animation-timing-function: linear;
+    animation-duration: 1.5s;
+    animation-delay: 0s;
+    animation-iteration-count: 3;
+    position: relative;
+    top: -59px;
+}
+
+@keyframes rotationAnimation {
+    from {
+        transform: rotateZ(0deg);
+    }
+    to {
+        transform: rotateZ(360deg);
+    }
+}
+@keyframes firstCircleAnimation {
+    from {
+        border: 1px solid lightgray;
+        background-color: white;
+        
+    }
+    to {
+        border: 1px solid #2fb45a;
+        background-color:#2fb45a;
+    }
+}
+@keyframes beforeAnimation {
+    from {
+        border-color: white;
+    }
+    to {
+        border-color: white;
+    }
+}
+
+
+
+
+
+
+
