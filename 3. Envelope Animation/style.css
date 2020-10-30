@@ -1,0 +1,85 @@
+* {
+    font-family: 'Roboto', sans-serif;
+}
+html {
+    background-color: #28c880;
+}
+body {
+    background-color: #323641;
+    width: 500px;
+    height: 400px;
+    margin: 200px auto;
+    text-align: center;
+    padding: 20px;
+}
+#main-div {
+   width: 400px;
+   height: 300px;
+   display: inline-block;
+   text-align: center;
+}
+#main-div:hover #envelope {
+   transform: translateY(35px);
+   transition: transform 0.2s ease-in-out;
+}
+#main-div:hover #envelope #triangle3 {
+   transform: translateY(-85px) translateX(7px) rotateX(180deg);
+   transition: transform 0.5s ease-in-out;
+}
+#main-div:hover #shadow {
+   width: 100px;
+   transition: 0.2s linear width;
+}
+#envelope {
+   display: inline-block;
+   margin-right: 70px;
+   margin-top: 90px;
+   transform: translateY(0px);
+   transition: linear 0.2s transform;
+}
+
+#triangle1 {
+   display: inline-block;
+   width: 0;
+   height: 0;
+   border-style: solid;
+   border-width: 0 0 80px 180px;
+   border-color: transparent transparent #e95f55 transparent;
+   
+}
+#triangle2 {
+   display: inline-block;
+   width: 0;
+   height: 0;
+   border-style: solid;
+   border-width: 43px 0 37px 81px;
+   border-color: transparent transparent transparent #e95f55;
+   position: relative;
+   left: 25%;
+   
+}
+#triangle3 {
+   display: inline-block;
+   width: 0;
+   height: 0;
+   border-style: solid;
+   border-width: 43px 96px 0 85px;
+   border-color: #e95f55 transparent transparent transparent;
+   position: relative;
+   left: 10%;
+   transform: TranslateY(-85px)  translateX(6px) rotateX(0deg);
+   transform-origin: top;
+}
+#shadow {
+   display: inline-block;
+   width: 180px;
+   transition: 0.2s linear width;
+   height: 15px;
+   filter: blur(5px);
+   background-color: black;
+   border-radius: 90%;
+   position: relative;
+   left: 2%;
+}
+
+
