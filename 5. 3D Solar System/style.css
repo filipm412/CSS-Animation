@@ -1,0 +1,358 @@
+* {
+    font-family: 'Open Sans', sans-serif;
+}
+body {
+    background: radial-gradient(ellipse at bottom, #1C2837 0%, #050608 100%);
+    background-attachment:fixed;
+    text-align: center;
+}
+#main-container {
+    width: 1500px;
+    height: 700px;
+    display: inline-block;
+    margin: 100px auto; 
+}
+h2 {
+    color: white;
+    text-align: center;
+}
+#system {
+    display: inline-block;
+    width: 1200px;
+    height: 500px;
+    margin-top: 50px;
+}
+/****ORBITS*****/
+
+
+#neptune {
+    width: 1100px;
+    height: 1100px;
+    border: solid gray 0.5px;
+    border-radius: 50%;
+    position: relative;
+    left: 5%;
+    top: -54%;
+    animation-name: planet-animation;
+    animation-duration: 400s;
+    animation-iteration-count: infinite;
+    animation-direction: normal;
+    animation-timing-function: linear;
+    transform-style: preserve-3d;   
+}
+#uranus {
+    width: 1000px;
+    height: 1000px;
+    border: solid gray 0.5px;
+    border-radius: 50%;
+    position: relative;
+    left: 9%;
+    top: -266%;
+    transform: rotateX(75deg);
+    animation-name: planet-animation;
+    animation-duration: 350s;
+    animation-iteration-count: infinite;
+    animation-direction: normal;
+    animation-timing-function: linear;
+    transform-style: preserve-3d;   
+}
+#saturn {
+    width: 800px;
+    height: 800px;
+    border: solid gray 0.5px;
+    border-radius: 50%;
+    position: relative;
+    left: 19%;
+    top: -447%;
+    transform: rotateX(75deg);
+    animation-name: planet-animation;
+    animation-duration: 330s;
+    animation-iteration-count: infinite;
+    animation-direction: normal;
+    animation-timing-function: linear;
+    transform-style: preserve-3d;       
+}
+#jupiter {
+    width: 600px;
+    height: 600px;
+    border: solid gray 0.5px;
+    border-radius: 50%;
+    position: relative;
+    left: 28%;
+    top: -588%;
+    transform: rotateX(75deg);
+    animation-name: planet-animation;
+    animation-duration: 300s;
+    animation-iteration-count: infinite;
+    animation-direction: normal;
+    animation-timing-function: linear;
+    transform-style: preserve-3d;   
+}
+#mars {
+    width: 500px;
+    height: 500px;
+    border: solid gray 0.5px;
+    border-radius: 50%;
+    position: relative;
+    left: 33%;
+    top: -699%;
+    transform: rotateX(75deg);
+    animation-name: planet-animation;
+    animation-duration: 150s;
+    animation-iteration-count: infinite;
+    animation-direction: normal;
+    animation-timing-function: linear;
+    transform-style: preserve-3d;      
+}
+#earth {
+    width: 450px;
+    height: 450px;
+    border: solid gray 0.5px;
+    border-radius: 50%;
+    position: relative;
+    left: 35%;
+    top: -795%;
+    transform: rotateX(75deg);
+    animation-name: planet-animation;
+    animation-duration: 80s;
+    animation-iteration-count: infinite;
+    animation-direction: normal;
+    animation-timing-function: linear;
+    transform-style: preserve-3d;      
+}
+#venus {
+    width: 350px;
+    height: 350px;
+    border: solid gray 0.5px;
+    border-radius: 50%;
+    position: relative;
+    left: 40%;
+    top: -876%;
+    transform: rotateX(75deg);
+    animation-name: planet-animation;
+    animation-duration: 50s;
+    animation-iteration-count: infinite;
+    animation-direction: normal;
+    animation-timing-function: linear;
+    transform-style: preserve-3d;      
+}
+#mercury {
+    width: 250px;
+    height: 250px;
+    border: solid gray 0.5px;
+    border-radius: 50%;
+    position: relative;
+    left: 44%;
+    top: -937%;
+    transform: rotateX(75deg);
+    animation-name: planet-animation;
+    animation-duration: 20s;
+    animation-iteration-count: infinite;
+    animation-direction: normal;
+    animation-timing-function: linear;
+    transform-style: preserve-3d;      
+}
+#moon {
+    width: 30px;
+    height: 30px;
+    border: solid gray 0.5px;
+    border-radius: 50%;
+    position: relative;
+    left: -31%;
+    top: -17%;
+    transform: rotateX(75deg);
+    animation-name: planet-animation;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-direction: normal;
+    animation-timing-function: linear;
+    transform-style: preserve-3d;      
+}
+#sun {
+    width: 100px;
+    height: 100px;
+    background: linear-gradient(#f9b800 20%, #dd8500 50%, #f9b800 80%);
+    border-radius: 100%;
+    position: fixed;
+    top: 42.5%;
+    left: 50%;
+    box-shadow: 0px 0px 8px #f9b800;
+} 
+
+/****PLANETS*****/
+
+#moon::after {
+    content: '';
+    width: 5px;
+    height:5px;
+    background-color: #fa5f26;
+    position: fixed;
+    top: 2%;
+    left: 68.3%;
+    border-radius: 100%;
+    animation-name: invert;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-direction: normal;
+    animation-timing-function: linear;
+    transform-style: preserve-3d;  
+}
+#mercury::after {
+    content: '';
+    width: 10px;
+    height:10px;
+    background-color: #fa5f26;
+    position: fixed;
+    top: 2%;
+    left: 68.3%;
+    border-radius: 100%;
+    animation-name: invert;
+    animation-duration: 20s;
+    animation-iteration-count: infinite;
+    animation-direction: normal;
+    animation-timing-function: linear;
+    transform-style: preserve-3d;  
+}
+#venus::after {
+    content: '';
+    width: 19px;
+    height:19px;
+    background-color: #fa5f26;
+    position: fixed;
+    top: 2%;
+    left: 68.3%;
+    border-radius: 100%;
+    animation-name: invert;
+    animation-duration: 50s;
+    animation-iteration-count: infinite;
+    animation-direction: normal;
+    animation-timing-function: linear;
+    transform-style: preserve-3d;    
+}
+#planet-earth {
+    width: 20px;
+    height:20px;
+    background-color: #248dd0;
+    position: fixed;
+    top: 18%;
+    left: 8.3%;
+    border-radius: 100%;
+    animation-name: invert;
+    animation-duration: 80s;
+    animation-iteration-count: infinite;
+    animation-direction: normal;
+    animation-timing-function: linear;
+    transform-style: preserve-3d; 
+}
+#mars::after {
+    content: '';
+    width: 22px;
+    height:22px;
+    background-color: #cc1e2c;
+    position: fixed;
+    top: 2%;
+    left: 67.3%;
+    border-radius: 100%;
+    animation-name: invert;
+    animation-duration: 150s;
+    animation-iteration-count: infinite;
+    animation-direction: normal;
+    animation-timing-function: linear;
+    transform-style: preserve-3d; 
+}
+#jupiter::after {
+    content: '';
+    width: 70px;
+    height:70px;
+    background: linear-gradient(54deg, #3d2f27 30%, #9d5721 70%);
+    position: fixed;
+    top: 2%;
+    left: 68.3%;
+    border-radius: 100%;
+    animation-name: invert;
+    animation-duration: 300s;
+    animation-iteration-count: infinite;
+    animation-direction: normal;
+    animation-timing-function: linear;
+    transform-style: preserve-3d;  
+}
+#saturn::after {
+    content: '';
+    width: 10.2em;
+    height:5.2em;
+    position: fixed;
+    top: 17%;
+    left: -0.7%;
+    animation-name: invert;
+    animation-duration: 330s;
+    animation-iteration-count: infinite;
+    animation-direction: normal;
+    animation-timing-function: linear;
+    transform-style: preserve-3d;  
+    background-image: url('saturn.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+#uranus::after {
+    content: '';
+    width: 2.2em;
+    height:2.2em;
+    background: linear-gradient(54deg, #88aaaa 30%, #b3e0e0 70%);
+    position: fixed;
+    top: 95%;
+    left: 68.3%;
+    border-radius: 100%;
+    animation-name: invert;
+    animation-duration: 350s;
+    animation-iteration-count: infinite;
+    animation-direction: normal;
+    animation-timing-function: linear;
+    transform-style: preserve-3d;  
+}
+#neptune::after {
+    content: '';
+    width: 2em;
+    height: 2em;
+    background: linear-gradient(54deg, #123c63 30%, #175e9e 70%);
+    border-radius: 50%;
+    position: absolute;
+    top: 40%;
+    left: 99%;
+    display: inline-block;
+    animation-name: invert;
+    animation-duration: 400s;
+    animation-iteration-count: infinite;
+    animation-direction: normal;
+    animation-timing-function: linear;
+    transform-style: preserve-3d;    
+}
+
+
+
+/****ANIMATION*****/
+
+@keyframes invert {
+    0%   { 
+        transform: rotateX(-90deg) rotateY(360deg) rotateZ(0deg);
+        
+    }
+    100% { 
+        transform: rotateX(-90deg) rotateY(0deg) rotateZ(0deg); 
+        
+    }
+}
+
+
+@keyframes planet-animation {
+    from {
+        transform: rotateX(75deg)  rotateZ(0deg);
+    }
+    to {
+        transform:  rotateX(75deg) rotateZ(-360deg);
+    }
+}
+
+
+
+
